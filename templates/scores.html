@@ -1,0 +1,139 @@
+{% extends 'layout.html' %}
+{% block styles %}
+<!-- styles would go in here -->
+<style type="text/css">
+            body{
+                font-family: Verdana;
+                line-height: 1.5;
+            }
+
+            .tabs{
+                max-width: 600px;
+                margin: 0 auto;
+                }
+
+            .tab-list{
+                padding-bottom: 1rem;
+            }   
+
+            .tab{
+                border-radius: 40px;
+                display: inline-block;
+                text-decoration: none;
+                padding: .5rem 1rem;
+                color: white;
+                background: navy;
+                font-weight: bold;
+            }
+
+
+            .tab.active{
+                background-color: cornflowerblue;
+            }
+
+            .tab-content{
+                background-color: lightgrey;
+                display: none;
+            }
+
+            .show{
+                display: block;
+            }
+
+
+    </style>
+{% endblock %}
+
+{% block body %}
+    <h1>High Scores</h1>
+<p>If you don't see your score in the high scores, check the your score tab to see your results.</p>
+    <div class="tabs">
+        <!-- act as buttons for us -->
+        <nav id="tab-list">
+            <a class="tab active" href="#tab-one">Highest Scores</a>
+            <a class="tab" href="#tab-two">Your Scores</a>
+        </nav>
+
+        <div id="tab-one" class="tab-content show">
+            <table class="score">
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+        <!-- this is where a python loop would go. -->
+                <tr>
+                    <td>Joe</td>
+                    <td>13200</td>
+                </tr>
+        <!-- end loop here -->      
+                <tr>
+                    <td>Mark</td>
+                    <td>12200</td>
+                </tr>
+                <tr>
+                    <td>Marie</td>
+                    <td>11500</td>
+                </tr>
+                <tr>
+                    <td>Brett</td>
+                    <td>11350</td>
+                </tr>
+                <tr>
+                    <td>Julie</td>
+                    <td>950</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="tab-two" class="tab-content">
+            <table class="score">
+                <tr><!-- jinja Name -->
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+        <!-- this is where a python loop would go. -->
+                <tr>
+                    <td>Joe</td>
+                    <td>13200</td>
+                </tr>
+        <!-- end loop here -->      
+                <tr>
+                    <td>Joe</td>
+                    <td>12200</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>11500</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>11350</td>
+                </tr>
+                <tr>
+                    <td>Joe</td>
+                    <td>950</td>
+                </tr>
+            </table>        
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    $('#tab-list').on('click', '.tab', function(e){
+        //e captures the event object
+        console.log(e);
+
+        e.preventDefault(); //don't do the default behavior
+        $('.tab').removeClass('active');
+        $('.tab-content').removeClass('show');
+        $(this).addClass('active');
+        $($(this).attr('href')).addClass('show');
+
+    })
+</script>
+
+<!-- scripts would go in here -->
+{% endblock %}
+</html>

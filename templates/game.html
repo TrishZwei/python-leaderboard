@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block styles %}
+<!-- styles would go in here -->
+{% endblock %}
+
+{% block body %}
+ <body>
+    <a href="/"><h1>PACMAN</h1></a>
+    <div class="score">SCORE: <span>0</span></div>
+    <div id="grid-container"></div>
+    <div class="overlay"></div>
+    <div class="modal">
+        <h2>Enter Your Name</h2>
+        <form action="" method="POST">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
+           <input type="hidden" name="score">
+           <button type="submit" class="close button">Click to Add Your Score</button>             
+        </form>
+    </div>
+  
+{% endblock %}
+{% block script %}
+<!-- local scripts go in here... and I put the long local script into an external file. -->
+<script type="text/javascript" src="{{url_for('static', filename='scripts/game.js')}}"></script>
+{% endblock %}
+</html>

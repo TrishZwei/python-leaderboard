@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+{% block styles %}
+<!-- styles would go in here -->
+{% endblock %}
+
+{% block body %}
+    <h1>PACMAN GAME</h1>
+    <p>Welcome to our retro PacMan game. You love the 80's, right? Check out our high scores below:</p>
+
+    <table class="score">
+        <tr>
+            <td colspan="2"><h2>High Scores</h2></td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+<!-- this is where a python loop would go. -->
+        <tr>
+            <td>Joe</td>
+            <td>13200</td>
+        </tr>
+<!-- end loop here -->      
+        <tr>
+            <td>Mark</td>
+            <td>12200</td>
+        </tr>
+        <tr>
+            <td>Marie</td>
+            <td>11500</td>
+        </tr>
+        <tr>
+            <td>Brett</td>
+            <td>11350</td>
+        </tr>
+        <tr>
+            <td>Julie</td>
+            <td>950</td>
+        </tr>
+    </table>
+<p>Use arrow keys to move PacMan on the board and gobble up pellets. Avoid the ghosts, except when they are ghostly blue.</p>   
+<a href="/game"><div class="button">Start Game</div></a>
+{% endblock %}
+
+{% block script %}
+<!-- scripts would go in here -->
+{% endblock %}
+</html>
