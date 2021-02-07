@@ -15,28 +15,12 @@
             <th>Name</th>
             <th>Score</th>
         </tr>
-<!-- this is where a python loop would go. -->
+        {% for score in scores  %}
         <tr>
-            <td>Joe</td>
-            <td>13200</td>
+            <td>{{score[0]}}</td>
+            <td>{{score[1]}}</td>
         </tr>
-<!-- end loop here -->      
-        <tr>
-            <td>Mark</td>
-            <td>12200</td>
-        </tr>
-        <tr>
-            <td>Marie</td>
-            <td>11500</td>
-        </tr>
-        <tr>
-            <td>Brett</td>
-            <td>11350</td>
-        </tr>
-        <tr>
-            <td>Julie</td>
-            <td>950</td>
-        </tr>
+        {%  endfor %}
     </table>
 <p>Use arrow keys to move PacMan on the board and gobble up pellets. Avoid the ghosts, except when they are ghostly blue.</p>   
 <a href="/game"><div class="button">Start Game</div></a>

@@ -2,13 +2,8 @@
 {% block styles %}
 <!-- styles would go in here -->
 <style type="text/css">
-            body{
-                font-family: Verdana;
-                line-height: 1.5;
-            }
-
             .tabs{
-                max-width: 600px;
+                /*max-width: 600px;*/
                 margin: 0 auto;
                 }
 
@@ -23,7 +18,8 @@
                 padding: .5rem 1rem;
                 color: white;
                 background: navy;
-                font-weight: bold;
+                margin: .5em .5em 1em;
+                letter-spacing: 1.5px;
             }
 
 
@@ -32,7 +28,6 @@
             }
 
             .tab-content{
-                background-color: lightgrey;
                 display: none;
             }
 
@@ -45,76 +40,46 @@
 {% endblock %}
 
 {% block body %}
-    <h1>High Scores</h1>
-<p>If you don't see your score in the high scores, check the your score tab to see your results.</p>
-    <div class="tabs">
-        <!-- act as buttons for us -->
+<h1>High Scores</h1>
+    <div class="tabs">       
+        {% if username != '' %}
+        <p>If you don't see your score in the high scores, check the your score tab to see your results.</p>
         <nav id="tab-list">
-            <a class="tab active" href="#tab-one">Highest Scores</a>
-            <a class="tab" href="#tab-two">Your Scores</a>
+            <a class="tab button active" href="#tab-one">Highest Scores</a>
+            <a class="tab button" href="#tab-two">{{username}}'s Scores</a>
         </nav>
-
+       {% endif %}
         <div id="tab-one" class="tab-content show">
             <table class="score">
                 <tr>
                     <th>Name</th>
                     <th>Score</th>
                 </tr>
-        <!-- this is where a python loop would go. -->
+                {% for score in scores  %}
                 <tr>
-                    <td>Joe</td>
-                    <td>13200</td>
+                    <td>{{score[0]}}</td>
+                    <td>{{score[1]}}</td>
                 </tr>
-        <!-- end loop here -->      
-                <tr>
-                    <td>Mark</td>
-                    <td>12200</td>
-                </tr>
-                <tr>
-                    <td>Marie</td>
-                    <td>11500</td>
-                </tr>
-                <tr>
-                    <td>Brett</td>
-                    <td>11350</td>
-                </tr>
-                <tr>
-                    <td>Julie</td>
-                    <td>950</td>
-                </tr>
+                {%  endfor %}
             </table>
         </div>
-
+        {% if username != '' %}
         <div id="tab-two" class="tab-content">
             <table class="score">
-                <tr><!-- jinja Name -->
+                <tr>
                     <th>Name</th>
                     <th>Score</th>
                 </tr>
-        <!-- this is where a python loop would go. -->
+                {% for score in nameScores  %}
                 <tr>
-                    <td>Joe</td>
-                    <td>13200</td>
+                    <td>{{score[0]}}</td>
+                    <td>{{score[1]}}</td>
                 </tr>
-        <!-- end loop here -->      
-                <tr>
-                    <td>Joe</td>
-                    <td>12200</td>
-                </tr>
-                <tr>
-                    <td>Joe</td>
-                    <td>11500</td>
-                </tr>
-                <tr>
-                    <td>Joe</td>
-                    <td>11350</td>
-                </tr>
-                <tr>
-                    <td>Joe</td>
-                    <td>950</td>
-                </tr>
-            </table>        
-    </div>
+                {%  endfor %}
+            </table>
+        </div>
+
+        {% endif %}
 </div>
 
 {% endblock %}
