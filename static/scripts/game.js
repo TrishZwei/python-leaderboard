@@ -101,6 +101,11 @@
             console.log('player gets to eats ghost. returns to start position')
             update = true;
             
+            if($('#'+tempX+'-'+tempY).hasClass('beans')){
+                score+=50;
+                $('#'+tempX+'-'+tempY).removeClass('beans')
+            }    
+
             let color = '';
             //think about a more elegent solution....
 
@@ -149,6 +154,7 @@
                 //have all power been gathered up?
                 
             }
+            
             if($('#'+tempX+'-'+tempY).hasClass('beans')){
                 $('#'+tempX+'-'+tempY).removeClass('beans');
                 score+=50;
@@ -297,7 +303,7 @@
         }
         console.log(message);
         $('#grid-container').html(message); //empties the grid of its squares and inserts the html from message instead
-        $('#grid-container').append('<div class="option button">Click here to log your score!</div>');
+        $('#grid-container').append('<div class="option button">Click here to log your score!</div><p>OR</p><a href="/game"><div class="button">play again?</div></a>');
         $('.option').click(function() {
                   //open modal window. Because the button did not exist on this page until now, we have to write the evend listener on that button here. Where since our modal window already existed, we can write event listeners for it outside of this function and in its own JS function
                 $('.overlay, .modal').addClass('active');
