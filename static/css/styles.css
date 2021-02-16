@@ -15,6 +15,20 @@
             	font-size: 40px;
             	margin: .5em
             }
+
+            nav.nav{
+            	background-color: #e1e1e1;
+            	padding: .5em;
+            	color:  #666;
+            }
+
+            nav.nav a, nav.nav a:visited{
+            	color: #666;
+            }
+            nav.nav a:hover{
+            	text-decoration: underline;
+            }
+
 			.container {
 			    min-width: 650px;
 			    max-width: 900px;
@@ -30,13 +44,24 @@
 			}
 			th{
 				font-size: 1.5em;
-				padding-bottom: 1em;
+				padding: 0 0 .5em;
+				text-align: left;
 			}
 
 			td{
 				padding: .5em;
+				text-align: left;
+			}
+
+			td:last-child, th:last-child{
+				text-align: right;
+				padding-right: 1.5em
 			}
 			
+			td:first-child, th:first-child{
+				padding-left: 1.5em
+			}	
+
 			p {
 				font-family: 'Press Start 2P', cursive;
 				color: white;
