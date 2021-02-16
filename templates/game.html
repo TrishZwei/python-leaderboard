@@ -13,7 +13,7 @@
         <h2>Enter Your Name</h2>
         <form action="" method="POST">
             <label for="name">Name:</label>
-            <input id="name" type="text" name="name" required maxlength="10" placeholder="Your Name">
+            <input id="name" type="text" name="name" required maxlength="20" placeholder="Your Name">
            <input type="hidden" name="score">
            <button type="submit" class="close button">Click to Add Your Score</button>             
         </form>
@@ -21,7 +21,7 @@
   
 {% endblock %}
 {% block script %}
-<!-- local scripts go in here... and I put the long local script into an external file. -->
+<!-- local scripts go in here... and I put the long local script into an external file, which can be seen below -->
 <script type="text/javascript" src="{{url_for('static', filename='scripts/game.js')}}"></script>
 {% endblock %}
 </html>

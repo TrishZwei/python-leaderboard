@@ -26,7 +26,8 @@ class Score(db.Model):
 	id = db.Column(db.Integer, primary_key=True) 
 	#not planning to delete scores, but still a good practice
 	p_name = db.Column(db.String(20), unique=False, nullable=False)
-	p_score = db.Column(db.Integer, unique=False, nullable=False) #want score as int so we can sort by it easily.
+	p_score = db.Column(db.Integer, unique=False, nullable=False) 
+	#want score as int so we can sort by it easily.
 
 	def __init__(self, p_name, p_score):
 		self.p_name = p_name
@@ -80,7 +81,7 @@ def scores(username = ''):
 		scores.append(score_dict)
 
 	if username != '':
-		print(username)
+		#print(username)
 		#spacing in the filter_by argument very important
 		nameResults = Score.query.filter_by(p_name=username).order_by(desc('p_score')).limit(5).all()
 		nameScores = []
