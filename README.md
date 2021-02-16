@@ -38,6 +38,7 @@ An example row of data might look like:
 
 ```
 The first item is an id, which would be unique, so that if we want to update or delete that specific row of data, we have a way of pointing to only one row of data. Otherwise we'd be updating or deleting more than one row of data. See the image below:
+
 ![Table of Data](/assets/scoretable.png)
 
 If I wanted to target one of Joe's scores for update or delete, I would have to target a row of data uniquely. If I wanted to delete row 2, where Joe has a score of 350, I can simply use the id. As seen below, the first one is easier to update or delete without potentially affecting the other rows of data.
