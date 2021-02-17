@@ -2,7 +2,7 @@
  
 This is leaderboard using python, flask and SQAlchemy. This serves the purpose of:
 1. How to set up an SQLite table using SQAlchemy
-2. How to to the first half of CRUD.
+2. How to do the first half of CRUD.
 	*Create (insert) data into the scores table with the Score class
 	*Read existing data from the scores table and output that to the pages on the website
 3. How to get the data to get inserted into the scores table via the POST method in our forms
