@@ -114,7 +114,7 @@ Lines 89 - 91 does the same as 79 - 81 only with a different query with differen
 
 Line 102 and 103 is the standard code to make this page run itself when called to do so.
 
-##Other Files (Python):
+## Other Files (Python):
 
 ### templates > layout.html
 Layout contains the main html. Parts are broken up into chunks:
