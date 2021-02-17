@@ -143,7 +143,7 @@ This is the list of high scores. This works just like the home page but with one
 
 [Lines 87 - 101](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/templates/scores.html#L87-L101) govern if the local JavaScript appears on that page. No need for the tab JS if there is no tab. 
 
-##Other Files (JS/CSS/favicons):
+## Other Files (JS/CSS/favicons):
 ### static > css > styles.css
 This is the main location of css styling. The code for the dynamic link to it is seen in templates > includes> _head.html
 
