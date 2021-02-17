@@ -21,7 +21,7 @@ Find below a line by line explanation of what is happening in each file:
 
 We need to be able to connect our python file (app.py) to our database. Line 13 stores the path to the base directory, so we can have reference to the location of our new SQLite database on line 17. Line 13 and 17 work together to create a complete path. This way we don't have to type out the entire path and if your directory is different from mine, you do not have to update the code.
 
-Line 17 tells our app.py where to find the database.
+[Line 17](https://github.com/TrishZwei/python-leaderboard/edit/main/README.md) tells our app.py where to find the database.
 
 Line 18 tells us not to track modifications. This should be set to True or False. The default is none and will issue warnings about huge overhead if you do not set it to one of those values. False tells the db not to reply when a change has been made to the database. (upon insert, update, or delete)
 
