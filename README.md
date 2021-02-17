@@ -204,9 +204,9 @@ do all the stuff we want it to. Otherwise it gets ignored. This prevents the use
 
 [Line 111](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L111) checks to see if the ghosts are still in the powerup phase where pacman can eat them. If (true) they are, lines 106-136 handles pacman getting points, and we handle the ghost to let him respawn in the inner box.
 
-[Line 145](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L145) calls a function called genFloatGhost(pos.top, pos.left, color) that handles that animation and respawning. The arguments passed will change how the function operates. (see line: TODO ADD FUNCTION LINE NUMBER HERE )
+[Line 145](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L145) calls a function called genFloatGhost(pos.top, pos.left, color) that handles that animation and respawning. The arguments passed will change how the function operates. (see[Line 344](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L344) )
 
-[Line 147](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L147) checks to see if pacman has run into a ghost. If true, calls the gameOver function. (see line: 308 )
+[Line 147](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L147) checks to see if pacman has run into a ghost. If true, calls the gameOver function. (see [Line 308](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L308))
 
 [Line 153](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L153) checks to see if the square they are attempting to move into is a wall. If true... nothing happens.
 
@@ -218,13 +218,13 @@ Line Inside here are other checks such as if the power up is in the next square.
 
 [Line 166](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L166) checks if there is a bean in the square
 
-[Line 174](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L174) checks the win condition, if true, passes a 'win' argument which changes how the function operates (see line: TODO ADD FUNCTION LINE NUMBER HERE )
+[Line 174](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L174) checks the win condition, if true, passes a 'win' argument which changes how the function operates (see [Line 308](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L308))
 
 [Line 189](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L189) is triggered when the gameRunning value is something other than true.
 
 [Line 191](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L191) checks to see if the escape key has been pressed
 
-[Line 193](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L193) tells the element with the class of overlay to act as if it has been clicked. (see line: 193)
+[Line 193](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L193) tells the element with the class of overlay to act as if it has been clicked. (see [Line 408](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L408))
 
 [Line 199](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L199) ends the keydown listener
 
@@ -252,7 +252,7 @@ Line Inside here are other checks such as if the power up is in the next square.
 
 [Line 250](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L250) checks to see if the ghost could move into the square it wants to. I added some comments to myself about how I could improve this functionality.
 
-[Line 260](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L260) checks to see if a ghost is moving into a square with pacman. If true, gameOver() is called. (see line: 308)
+[Line 260](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L260) checks to see if a ghost is moving into a square with pacman. If true, gameOver() is called. (see [Line 308](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L308))
 
 
 [Line 264](https://github.com/TrishZwei/python-leaderboard/blob/51d1caf46675054f86064987aaa714f8e4045ae7/static/scripts/game.js#L264) is run if none of the above conditions are met. 

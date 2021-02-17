@@ -400,7 +400,7 @@ TODO:
 
 2. add function to add cherry and have it follow a path... 
 
-3. refactor the movement checks for both and see if we can put them into one function
+3. refactor the movement checks for both ghosts and player and see if we can put them into one function
 
 */
 
